@@ -1,0 +1,50 @@
+---
+title: "Multiple Comparisons references"
+author: "R.G. Thomas"
+date: "`r Sys.Date()`"
+fontsize: 11pt
+geometry: "left=3cm,right=3in,top=2cm,bottom=2cm"
+# lof: yes
+# lot: yes
+output:
+  pdf_document:
+    # toc: true
+    number_sections: true
+    highlight: tango
+    keep_tex: true 
+    includes:
+      in_header: "~/shr/preamble.tex"
+header-includes:
+   - \rhead{Lab report}
+   - \fancyfoot[L]{\currfilename} %put current file in footer
+   - \setlength{\headheight}{13.59999pt}
+---
+
+```{r  include=FALSE, echo=F}
+rm(list = ls())
+options(
+  knitr.kable.NA = "", dplyr.summarise.inform = FALSE,
+  dplyr.print_max = 1e9, knitr.table.format = "latex"
+)
+library(pacman)
+p_load(skimr, janitor, kableExtra, tidyverse, knitr, lubridate, readxl)
+
+opts_chunk$set(
+  warning = FALSE, message = FALSE, echo = FALSE, fig.width = 3.2,
+  fig.height = 3, results = "asis", dev = "pdf",
+  opts_chunk$set(cache.path = "cache/")
+)
+source("~/shr/zz.tools.R")
+options(scipen = 1, digits = 2)
+```
+
+
+<!-- your comment 
+```{r, attr.source='.numberLines', ref.label=knitr::all_labels(),echo=TRUE,eval=FALSE}
+```
+-->
+
+\bibliography{/Users/zenn/prj/x25/x25.bib}
+\bibliographystyle{plain}
+\nocite{*}
+
