@@ -1,0 +1,14 @@
+Package: multiplecomp
+Title: Multiple Comparisons in Clinical Trials
+Version: 0.0.0.9000
+Authors@R:
+    person("Ronald G.", "Thomas", email = "rthomas@ucsd.edu", role = c("aut", "cre"))
+Description: Methods for handling multiple comparisons and multiplicity adjustment in clinical trials.
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
+Imports:
+    renv,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

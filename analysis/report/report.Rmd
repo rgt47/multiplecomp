@@ -1,0 +1,54 @@
+---
+title: "Multiple Comparisons in Clinical Trials"
+author: "R.G. Thomas"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+fontsize: 11pt
+geometry: "left=3cm,right=5cm,top=2cm,bottom=2cm"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    toc: true
+    number_sections: true
+    highlight: tango
+    keep_tex: true
+header-includes:
+  - \rhead{Multiple Comparisons}
+  - \fancyfoot[L]{\currfilename}
+  - \setlength{\headheight}{13.59999pt}
+bibliography: references.bib
+csl: statistics-in-medicine.csl
+link-citations: true
+---
+
+```{r setup, include=FALSE}
+options(
+  knitr.kable.NA = "", dplyr.summarise.inform = FALSE,
+  dplyr.print_max = 1e9, knitr.table.format = "latex"
+)
+library(skimr)
+library(janitor)
+library(kableExtra)
+library(tidyverse)
+library(knitr)
+library(lubridate)
+library(readxl)
+
+opts_chunk$set(
+  warning = FALSE, message = FALSE, echo = FALSE,
+  fig.width = 3.2, fig.height = 3,
+  results = "asis", dev = "pdf",
+  cache.path = "cache/"
+)
+options(scipen = 1, digits = 2)
+```
+
+
+<!-- your comment 
+```{r, attr.source='.numberLines', ref.label=knitr::all_labels(),echo=TRUE,eval=FALSE}
+```
+-->
+
+\bibliography{/Users/zenn/prj/x25/x25.bib}
+\bibliographystyle{plain}
+\nocite{*}
+
